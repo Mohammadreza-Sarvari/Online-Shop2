@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "data": {
+        "title": "A20",
+        "price": "12000",
+        "stock": "1",
+        "category": "1",
+        "description": ""
+      },
+      "id": 1
+    },
+    {
+      "data": {
+        "title": "A21",
+        "price": "15000",
+        "stock": "2",
+        "category": "1",
+        "description": ""
+      },
+      "id": 2
+    },
+    {
+      "data": {
+        "title": "A22",
+        "price": "18000",
+        "stock": "3",
+        "category": "1",
+        "description": ""
+      },
+      "id": 3
+    },
+    {
+      "data": {
+        "title": "A23",
+        "price": "21000",
+        "stock": "4",
+        "category": "1",
+        "description": ""
+      },
+      "id": 4
+    },
+    {
+      "data": {
+        "title": "A24",
+        "price": "28000",
+        "stock": "1",
+        "category": "1",
+        "description": ""
+      },
+      "id": 5
+    },
+    {
+      "data": {
+        "title": "A25",
+        "price": "31000",
+        "stock": "2",
+        "category": "1",
+        "description": ""
+      },
+      "id": 6
+    }
+  ]
+}
