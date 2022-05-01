@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { RemoveModal } from "../components/productlist/RemoveModal";
 
 const data = [
@@ -12,7 +13,6 @@ const ProductsList = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [products, setProducts] = useState([]);
   const [ProductID, setProductID] = useState("");
-
   useEffect(() => {
     axios
       .get("http://localhost:4000/products")
@@ -72,9 +72,11 @@ const ProductsList = () => {
                           >
                             حذف
                           </button>
+                          <Link to={`/products/edit/${product.id}`}>
                           <button type="button" className="btn btn-info">
                             ویرایش
                           </button>
+                          </Link>
                         </div>
                       </td>
                     </tr>

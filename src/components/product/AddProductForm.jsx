@@ -2,19 +2,36 @@ import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
 
-const AddProductForm = () => {
+const AddProductForm = ({ id, mode, productEdit }) => {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm();
 
   const onSubmit = (data) => {
-    axios
-      .post("http://localhost:4000/products", { data })
-      .then((response) => response)
-      .catch((err) => console.log(err));
+    if (mode === "edit") {
+      axios
+        .put(`http://localhost:4000/products/${id}`, { data })
+        .then((response) => response)
+        .catch((err) => console.log(err));
+    } else {
+      axios
+        .post("http://localhost:4000/products", { data })
+        .then((response) => response)
+        .catch((err) => console.log(err));
+    }
   };
+
+  if (mode === "edit") {
+    setValue("title", productEdit.title);
+    setValue("price", productEdit.price);
+    setValue("stock", productEdit.stock);
+    setValue("category", productEdit.category);
+    setValue("description", productEdit.description);
+  }
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="row">

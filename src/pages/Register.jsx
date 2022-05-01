@@ -48,7 +48,7 @@ const RegisterPage = () => {
               <div
                 className="alert alert-danger"
                 role="alert"
-                style={{ textAlign: "center" }}
+                style={{ textAlign: "center", width: "800px" }}
               >
                 {errors.email.message}
               </div>
@@ -57,6 +57,7 @@ const RegisterPage = () => {
               <div
                 className="alert alert-danger"
                 role="alert"
+                style={{ textAlign: "center", width: "800px" }}
               >
                 {errors.password.message}
               </div>
